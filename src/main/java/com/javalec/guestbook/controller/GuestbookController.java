@@ -21,7 +21,6 @@ public class GuestbookController {
 	@RequestMapping("/getguestbooklist.do")
 	public String getGuestBookList(GuestBookDAO dao, Model model) {
 		System.out.println("리스트 조회 컨트롤러");
-		//model.addAttribute("list", dao.selectList());
 		model.addAttribute("list", guestbookService.getGuestBookList());
 
 		return "index.jsp";
